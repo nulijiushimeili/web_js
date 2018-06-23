@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式-敏感字过滤</title>
+    <script>
+        window.onload=function (ev) {
+            var oText1 = document.getElementById('text1');
+            var oText2 = document.getElementById('text2');
+            var oBtn = document.getElementById('btn')
+            oBtn.onclick = function (ev2) {
+                var re = /日|操|傻逼|草|艹|你妈/g;
+                oText2.value = oText1.value.replace(re,"***");
+            }
+        }
+    </script>
+</head>
+<body>
+<textarea name="" cols="60" rows="10" id="text1"></textarea><br>
+<input type="button" id="btn" value="过滤敏感字"><br>
+<textarea name="" cols="60" rows="10" id="text2"></textarea>
+</body>
+</html>

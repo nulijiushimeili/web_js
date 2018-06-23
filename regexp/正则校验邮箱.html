@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则-校验邮箱</title>
+    <script>
+        window.onload=function (ev) {
+            var oText = document.getElementById('text');
+            var oBtn = document.getElementById('btn');
+            var oDiv = document.getElementById('div1');
+            oBtn.onclick= function (ev2) {
+                var re = /^\w+@[a-z0-9]+\.[a-z]+$/;
+
+                // ^ 不在[]里面的时候表示以什么打头,这里是[a-z0-9_]打头都可以
+                // \. 表示输出一个.
+                // $ 表示以前面的[a-z]结尾
+                // 使用test()这个方法,只要字符串的一部分满足要求,都会被匹配,
+                // 所以必须把前后都堵上
+                if(re.test(oText.value)){
+                    oDiv.innerText = "邮箱合法";
+                }else{
+                    oDiv.innerText = "邮箱不合法";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="text">
+<input type="button" id="btn" value="校验邮箱">
+<div id="div1"></div>
+</body>
+</html>

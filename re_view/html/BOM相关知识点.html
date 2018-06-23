@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM相关知识点</title>
+    <style>
+        img {
+            /*width: 500px;*/
+            height: 400px;
+            border: solid 1px greenyellow;
+        }
+        div {
+            width: 1028px;
+            margin: 0 auto;
+        }
+        p {
+            font-size: 18px;
+            color: #33f;
+        }
+        h1,h2,h3 {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p>window.open(打开页面的名称,打开方式(_self/_blank))-------打开一个页面,可以在新页面打开，也可以在当前页面打开</p>
+    <p>window.close()-----------colse在IE下，可以关闭用户打开的网页,而且会有提示，而火狐下只能关闭open出来的网页</p>
+    <p>window.navigator.userAgent-----------获取当前浏览器的类型和版本</p>
+    <p>window.location----------------------获取当前页面的地址，还可以赋值一个地址</p>
+    <p>尺寸及坐标</p>
+    <p>1.document.documentElement.clientWidth--------可视区的宽度</p>
+    <p>2.document.documentElement.clientHeight-------可视区的高度</p>
+    <p>3.document.body.scrollTop---------------------滚动距离(chrome下兼容，滚动距离是100的整数倍)</p>
+    <p>4.document.documentElement.scrollTop----------滚动距离(其他浏览器兼容)</p>
+    <p>window.onsize---------------------------------当窗口大小改变的时候发生</p>
+    <p>系统对话框</p>
+    <p>alert()</p>
+    <p>confirm(提问的内容)，返回Boolean值</p>
+    <p>prompt('提示'，'初始内容(可以省略)'),返回字符串或null------弹出一个能够输入的对话框</p>
+    <p>window.onresize--------------当窗口改变大小的时候</p>
+    <p>window.onscroll--------------当页面滚动的时候</p>
+</div>
+</body>
+</html>
