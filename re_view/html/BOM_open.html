@@ -6,7 +6,7 @@
     <script>
         window.onload = function (ev) {
             var oArea = document.getElementById('area');
-            var oBtn = document.getElementById('btn')
+            var oBtn = document.getElementById('btn');
             oBtn.onclick=function (ev2) {
                 var oNewWindow = window.open("about:blank","_blank");
                 oNewWindow.document.write(oArea.value);
@@ -15,7 +15,7 @@
     </script>
 </head>
 <body>
-<textarea name="" id="area" cols="60" rows="20"></textarea>
+<label for="area"><textarea name="" id="area" cols="60" rows="20"></textarea></label>
 <input type="button" value="submit" id="btn">
 </body>
 </html>

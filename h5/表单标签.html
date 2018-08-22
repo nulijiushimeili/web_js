@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+</head>
+<body>
+
+<!--
+input 标签的属性介绍
+    size : 设置输入框的宽度，一般不会使用
+    maxlength : 输入文本的最大长度
+    checked : 是否选中
+    value : 设置按钮的名称
+    type : 设施input的类型
+    name : 后台使用
+    file ： 文件
+    hidden ： 隐藏域，提交表单的时候会自动提交
+    button ： 实现特定事件的按钮
+
+-->
+<form action="" method="post">
+    <div>
+        <label >名字：<input type="text" name="username" value="请输入名字"/></label>
+    </div>
+    <div>
+        <label>姓氏：<input type="text" name="surname" /></label>
+    </div>
+    <div>
+        <label>登录名：<input type="text" name="usercode"> (可以包含a-z，0-9和下划线)</label>
+    </div>
+    <div >
+        <label>密码：<input type="password" name="password" /> （至少包含6个字符）</label>
+    </div>
+    <div>
+        <label>再次确认密码：<input type="password" name="password" /></label>
+    </div>
+    <div>
+        <label>电子邮箱：<input type="email" name="email" /> (必须包含@符号)</label>
+    </div>
+    <div>
+        <label>性别：<input type="radio" name="sex"/> 男</label>
+        <label> <input type="radio" name="sex" checked="checked"/> 女</label>
+    </div>
+    <div>
+        <label> 爱好：<input type="checkbox" name="hobby" checked="checked"/> 运动</label>
+        <label> <input type="checkbox" name="hobby" /> 聊天</label>
+        <label><input type="checkbox" name="hobby" /> 玩游戏</label>
+    </div>
+    <div>
+        <input type="file" name="file" value="选择文件" />
+    </div>
+    <div>
+        出生日期：
+        年：<select name="" id="y">
+        <option value="" selected="selected">请选择</option>
+            <option value="1" >1</option>
+            <option value="2">2</option>
+        </select>
+        月：<select name="" id="M">
+            <option value="1" selected="selected">1</option>
+            <option value="2">2</option>
+        </select>
+        日：<select name="" id="d">
+            <option value="1" selected="selected">1</option>
+            <option value="2">2</option>
+        </select>
+    </div>
+    <div>
+        <label>
+            <p>个人描述：</p>
+            <textarea name="userinfo" id="" cols="30" rows="10"></textarea>
+        </label>
+    </div>
+    <div>
+        <input type="submit" value="提交"/>
+        <input type="reset" value="重置"/>
+    </div>
+
+</form>
+</body>
+</html>

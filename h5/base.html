@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 设置页面跳转后的网页显示前缀-->
+    <base href="www.nulijiushimeili.com/">
+    <base href="_blank">
+    <title>base标签的使用</title>
+</head>
+<body>
+<a href="http://www.qq.com">腾讯qq</a>
+<a href="http://www.baidu.com" target="_self">百度首页</a>
+<a href="http://www.apache.org">Apache官方</a>
+<a href="http://zhidao.baidu.com">百度知道</a>
+<!--
+    base 标签的作用是指定本页面里面所有的连接的跳转方式
+    base 标签必须写在head标签里面
+    如果base标签和a标签都指定了跳转的方式，会根据就近原则，先以a标签中的target属性值为准，如果没有设定，则按照base标签的设定执行
+
+    base 中的 href 属性的取值：
+    _blank : 在新的页面打开新连接
+    _self : 在当前页面打开新连接
+-->
+</body>
+</html>
