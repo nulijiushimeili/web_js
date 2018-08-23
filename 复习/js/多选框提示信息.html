@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多选框提示信息</title>
+    <style>
+        div{
+            height: 100px;
+            width: 180px;
+            background: #ccc;
+            display:none;
+            border:1px solid #999;
+        }
+    </style>
+    <script>
+        window.onload=function (ev) { 
+            var oCheckbox = document.getElementById('checkbox');
+            var oDiv1 = document.getElementById('div1');
+            oCheckbox.onmouseover=function (ev2) { 
+                oDiv1.style.display = "block";
+            }
+            oCheckbox.onmouseout=function (ev2) {
+                oDiv1.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+
+<input type="checkbox" id="checkbox">
+
+<div id="div1">为了您的信息安全,请不要在公共场合选中此选择框</div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数传参-第二种写法</title>
+    <style>
+
+    </style>
+    <script>
+        function setoo(name) {
+            var oo=document.getElementById('text1');
+            //第一种属性操作的写法：
+            oo.value='16543432132';
+            //第二种写法：
+            oo[name]='4156432132'
+        }
+    </script>
+</head>
+<body>
+<input id="text1" type="text">
+<input type="button" value="改变吧"onclick="setoo(value)"><!--可以改变文本框的任意属性-->
+</body>
+</html>

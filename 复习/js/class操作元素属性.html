@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class操作元素属性</title>
+    <script>
+        window.onload=function () {
+            var oUl=document.getElementById('ul1');
+            var aLi=oUl.getElementsByTagName('li');
+            for(var i=0;i<aLi.length;i++)
+            {
+                if(aLi[i].className=='box')
+                {
+                    aLi[i].style.background='red';
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+<h1>class操作元素属性</h1>
+<p>选用id操作具有以下特点：</p>
+<p>1.html中具有相同ID的标签，页面不会报错。</p>
+<p>2.CSS对同一个页面中具有相同ID的标签，都会应用样式。</p>
+<p>3.如果有相同的ID，javascript只会取第一个具有该ID的标签。</p>
+<p>所以，我们可以通过class来获取很多元素进行操作。</p>
+<p>示例:</p>
+<ul id="ul1">
+    <li class="box"></li>
+    <li></li>
+    <li></li>
+    <li class="box"></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li class="box"></li>
+</ul>
+<p>代码如下：</p>
+<p>
+    window.onload=function () { <br>
+    var oUl=document.getElementById('ul1');<br>
+    var aLi=oUl.getElementsByTagName('li');<br>
+    for(var i=0;i< aLi.length;i++)<br>
+    {<br>
+    if(aLi[i].className=='box')<br>
+    {<br>
+    aLi[i].style.background='red';<br>
+    }<br>
+    }<br>
+    };<br>
+</p>
+</body>
+</html>

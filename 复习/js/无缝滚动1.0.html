@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>无缝滚动1.0</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div{
+            width: 1200px;
+            height: 180px;
+            background-color: red;
+            margin:0 auto;
+            border:1px solid black;
+            margin-top: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+        div ul{
+            position: absolute;
+            left: 0;
+            top: 0;
+
+        }
+        div ul li{
+            list-style: none;
+            float: left;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oDiv=document.getElementById('div');
+            var oUl=document.getElementById('ul');
+            var aLi=oUl.getElementsByTagName('li');
+            var timer=null;
+            oUl.innerHTML=oUl.innerHTML+oUl.innerHTML;
+            oUl.style.width=aLi[0].offsetWidth*aLi.length+'px';
+            var speed=-2;
+            function move(){
+                oUl.style.left=oUl.offsetLeft+speed+'px';
+                if(oUl.offsetLeft<-oUl.offsetWidth/2){
+                    oUl.style.left='0';
+                }
+                if(oUl.offsetLeft>0){
+                    oUl.style.left=-oUl.offsetWidth/2+'px';
+                }
+            };
+            timer=setInterval(move,30);
+            oDiv.onmouseover=function(){
+                clearInterval(timer);
+            };
+            oDiv.onmouseout=function(){
+                timer=setInterval(move,30);
+            };
+            document.getElementsByTagName('input')[0].onclick=function(){
+                speed=-2;
+            };
+            document.getElementsByTagName('input')[1].onclick=function(){
+                speed=2;
+            };
+            document.getElementsByTagName('input')[2].onclick=function(){
+                speed=speed-2;
+            };
+            document.getElementsByTagName('input')[3].onclick=function(){
+                speed=speed+2;
+            };
+        };
+
+    </script>
+</head>
+<body>
+<div id="div">
+    <ul id="ul">
+        <li><img src="images/wfgd/1.jpg" alt=""/></li>
+        <li><img src="images/wfgd/2.jpg" alt=""/></li>
+        <li><img src="images/wfgd/3.jpg" alt=""/></li>
+        <li><img src="images/wfgd/4.jpg" alt=""/></li>
+    </ul>
+</div>
+<div id="div1">
+    <input type="button" value="向左走"/>
+    <input type="button" value="向右走"/>
+    <input type="button" value="快点走"/>
+    <input type="button" value="慢点走"/>
+</div>
+</body>
+</html>

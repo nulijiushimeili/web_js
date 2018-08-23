@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>innerHTML</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div1{
+            width: 367px;
+            height: 700px;
+            margin: 0 auto;
+            border: 1px solid black;
+            background-color: #ccc;
+        }
+        #div1 ul li{
+            width: 100px;
+            height: 100px;
+            margin:10px;
+            list-style: none;
+            border: 1px solid black;
+            /*background-color: #ccc;*/
+            float: left;
+            line-height: 100px;
+            text-align: center;
+        }
+        .active{
+            background-color:red;
+        }  
+        div div{
+            border: 1px solid black;
+            width: 350px;
+            height: 200px;
+            margin: 10px;
+            float: left;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var oDiv=document.getElementById('div1');
+            var ali=oDiv.getElementsByTagName('li');
+            var otxt=oDiv.getElementsByTagName('div')[0];
+            var arr=['11111111111111','2222222222222222','3333333333','44444444'];
+            for(var i=0;i<ali.length;i++)
+            {
+                ali[i].index=i;
+                ali[i].onmouseover=function ()
+                {
+                    for(var i=0;i<ali.length;i++)
+                    {
+                        ali[i].className='';
+                    }
+                    this.className='active';
+                    otxt.innerHTML='<h2>'+(this.index+1)+'月活动</h2>'+arr[this.index];
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="div1" class="ccc">
+    <ul>
+        <li class="active">一月</li>
+        <li>二月</li>
+        <li>三月</li>
+        <li>四月</li>
+        <li>五月</li>
+        <li>六月</li>
+        <li>七月</li>
+        <li>八月</li>
+        <li>九月</li>
+        <li>十月</li>
+        <li>十一月</li>
+        <li>十二月</li>
+    </ul>
+    <div class="text1">
+
+    </div>
+</div>
+</body>
+</html>

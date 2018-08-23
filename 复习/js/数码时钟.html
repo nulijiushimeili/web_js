@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>数码时钟</title>
+    <style>
+        
+    </style>
+    <script>
+        function toDouble(sj){
+            var str;
+            if(sj<10){
+                str='0'+sj;
+            }
+            else
+            {
+                str=sj+'';
+            }
+            return str;
+        }
+        window.onload=function(){
+            var oDiv=document.getElementById('div');
+            var aImg=oDiv.getElementsByTagName('img');
+            function show(){
+                var oDate=new Date();
+                var str=toDouble(oDate.getHours())+toDouble(oDate.getMinutes())+toDouble(oDate.getSeconds());
+                //alert(str);
+                for(var i=0;i<aImg.length;i++){
+                    aImg[i].src='images/number/'+str[i]+'.jpg';
+                }
+            }
+            setInterval(show,1000);
+            show();//函数先执行一遍，就不会出现敢打开网页，时钟为全0状态。
+        }
+
+    </script>
+</head>
+<body>
+<div id="div">
+    <img src="images/number/0.jpg" alt=""/>
+    <img src="images/number/0.jpg" alt=""/>
+    ：
+    <img src="images/number/0.jpg" alt=""/>
+    <img src="images/number/0.jpg" alt=""/>
+    ：
+    <img src="images/number/0.jpg" alt=""/>
+    <img src="images/number/0.jpg" alt=""/>
+</div>
+</body>
+</html>

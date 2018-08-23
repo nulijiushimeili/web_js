@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>键盘控制移动1.0</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            document.onkeydown=function(ev){
+                var oEvent=ev||event;
+                var oDiv=document.getElementById('div1');
+                //alert(oEvent.keyCode);
+                if(oEvent.keyCode==37){
+                    oDiv.style.left=oDiv.offsetLeft-10+'px';
+                }
+                else if(oEvent.keyCode==39){
+                    oDiv.style.left=oDiv.offsetLeft+10+'px';
+                }
+                else if(oEvent.keyCode==38){
+                    oDiv.style.top=oDiv.offsetTop-10+'px';
+                }
+                else if(oEvent.keyCode==40){
+                    oDiv.style.top=oDiv.offsetTop+10+'px';
+                }
+            };
+        };
+    </script>
+</head>
+<body >
+<div id="div1">a</div>
+</body>
+</html>

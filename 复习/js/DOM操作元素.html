@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM操作元素</title>
+    <script>
+        window.onload=function () {
+            var oTxt=document.getElementById('txt');
+            var oBtn=document.getElementById('btn');
+            oBtn.onclick=function () {
+                //oTxt.value='变更内容';
+                //oTxt['value']='sdfsdfsd';
+                oTxt.setAttribute('value','用dom方法操作元素');
+            };
+        };
+    </script>
+</head>
+<body>
+<h1>
+    DOM方法操作元素
+</h1>
+<p>getAttribute(名称)---------------获取元素</p>
+<p>setAttribute(名称，值)---------------设置元素</p>
+<p>removeAttribute(名称)------------删除元素</p>
+<p>示例</p>
+<input id="txt" type="text" value="">
+<input type="button" id="btn" value="buttom">
+<p>
+    window.onload=function () { <br>
+    var oTxt=document.getElementById('txt');<br>
+    var oBtn=document.getElementById('btn');<br>
+    oBtn.onclick=function () {<br>
+    //oTxt.value='变更内容';<br>
+    //oTxt['value']='sdfsdfsd';<br>
+    oTxt.setAttribute('value','用dom方法操作元素');<br>
+    };<br>
+    };<br>
+</p>
+</body>
+</html>

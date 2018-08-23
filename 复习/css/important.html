@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>important</title>
+    <style>
+        ul{
+            color :red;
+        }
+        *{
+            /*通配符选择器也是直接选中的,比继承的优先级高,会影响css的继承性*/
+            color : blue;
+        }
+        li{
+            /*!important 可以提升选择器的优先级,将优先级提升到最高*/
+            /*!important;只能是直接对选中的属性有效,间接选中的无效,其他属性不受影响*/
+            color:#ccc !important;
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <li>
+        <p>权重问题important</p>
+
+    </li>
+</ul>
+</body>
+</html>

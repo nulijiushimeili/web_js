@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>合并单元格</title>
+    
+</head>
+<body>
+
+<!--1.合并单元格的属性-->
+    <!--colspan=""-->
+    <!--rowspan=""-->
+<!--2.合并单元格需要在对应的位置上,删除单元格,否则,表格会被撑变形-->
+
+<table bgcolor="black" width="400px" height="160px" align="center">
+    <tr bgcolor="#fff">
+        <td></td>
+        <td></td>
+        <td rowspan="2"></td>
+    </tr>
+    <tr bgcolor="#fff">
+        <!--合并单元格-->
+        <td></td>
+        <td></td>
+        <!--合并单元格,是向后或者向下的,要删掉对应位置的的单元格,负责表格会被撑变形-->
+    </tr>
+    <tr bgcolor="#fff">
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+</body>
+</html>

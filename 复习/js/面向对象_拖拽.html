@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>面向对象_拖拽</title>
+    <style>
+        #div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position:absolute;
+        }
+    </style>
+    <script>
+        window.onload=function()
+        {
+            var oDiv=document.getElementById('div');
+            oDiv.onmousedown= function (ev) {
+                var oEvent=ev||event;
+                var disX=oEvent.clientX-oDiv.offsetLeft;
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="div"></div>
+</body>
+</html>

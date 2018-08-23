@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>匀速运动</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #div1{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            top: 150px;
+            left: 500px;
+        }
+        #div2 {
+            width: 1px;
+            height: 500px;
+            position: absolute;
+            left: 300px;
+            top: 0;
+            background: black;
+        }
+        #div3{
+            width: 1px;
+            height: 500px;
+            position: absolute;
+            left: 1000px;
+            top: 0;
+            background: black;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var oBtn1=document.getElementById('btn1');
+            var oBtn2=document.getElementById('btn2');
+            oBtn1.onclick=function () {
+                startMove(300);
+            };
+            oBtn2.onclick=function () {
+                startMove(1000);
+            };
+        }
+        function startMove(iTarget) {
+            var oDiv = document.getElementById('div1');
+            var timer=null;
+            clearInterval(timer);
+            timer=setInterval(function () {
+                var speed = 0;
+                if (oDiv.offsetLeft < iTarget) {
+                    speed = 7;
+                }
+                else {
+                    speed = -7;
+                }
+                if(Math.abs(oDiv.offsetLeft - iTarget)<7)//当盒子快要到达的时候我们就算它到了
+                {
+                    clearInterval(timer);       //在此处关闭定时器，防止抖动
+                    oDiv.style.left=iTarget+'px';//当距离小于速度时，我们就让它直接到达目标点
+                }
+                else
+                {
+                    oDiv.style.left = oDiv.offsetLeft + speed + 'px';
+                }
+
+            }, 30);
+        }
+    </script>
+</head>
+<body>
+<input id="btn1" type="button"value="到300" >
+<input id="btn2" type="button"value="到1000" >
+<div id="div1"></div>
+<div id="div2"></div>
+<div id="div3"></div>
+</body>
+</html>

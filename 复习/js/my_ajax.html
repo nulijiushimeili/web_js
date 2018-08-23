@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>my_ajax</title>
+    <script>
+        window.onload=function(){
+            var oBtn=document.getElementById('btn');
+            oBtn.onclick=function(){
+                //创建ajax对象；
+                //非IE6
+                //var oAjsx=new XMLHttpRequest();
+                //IE6
+                //var oAjax=new ActiveXObject('Minisoft.XMLHTTP');
+                if(window.XMLHttpRequest)   //没有window.在IE6下会直接报错，有window.才会返回undefined
+                {
+                    var oAjax=new XMLHttpRequest();
+                }
+                else
+                {
+                    var oAjax=new ActiveXObject("Minisoft.XMLHTTP");
+                }
+                //2.链接服务器
+                oAjax.open('GET','a.txt?t='+new Date().getTime(),true);
+                //3.发送请求
+                oAjax.send();
+                //4.接收数据
+                oAjax.onreadystatechange=function(){
+                    //oAjax.readyState      浏览器和服务器进行到哪一步了
+                    if(oAjax.readyState==4)//读取成功
+                    {
+                        if(oAjax.status==200)
+                        {
+                            alert('sucess::'+oAjax.responseText);
+                        }
+                        else
+                        {
+                            alert('faild::'+oAjax.status);
+                        }
+                    }
+
+                };
+            };
+        };
+    </script>
+</head>
+<body>
+<input type="button" id="btn" value="button"/>
+</body>
+</html>

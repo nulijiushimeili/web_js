@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>阻止事件冒泡</title>
+    <style>
+        #div{
+            width: 600px;
+            height: 400px;
+            background-color: #ccc;
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oBtn=document.getElementById('btn');
+            var oDiv=document.getElementById('div');
+            oBtn.onclick=function(ev){    //获取事件对象的时候，函数需要传进去一个'ev'的参数
+                var oEvent=ev||event;    //获取事件对象
+                oDiv.style.display='block';
+                oEvent.cancelBubble=true;   //阻止事件冒泡
+            };
+            document.onclick=function(){
+                oDiv.style.display='none';
+            };
+            /*
+            oDiv.onclick=function(ev){
+                var oEvent=ev||event;
+                oEvent.cancelBubble=true;
+            };
+            */
+        };
+    </script>
+</head>
+<body>
+<input type="button" id="btn" value="按钮"/>
+<div id="div"></div>
+</body>
+</html>

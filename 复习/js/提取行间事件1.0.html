@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>提取行间事件</title>
+    <style>
+
+    </style>
+    <script>
+        window.onload=function(){
+            var oTx=document.getElementById('tx');
+            var oBtn=document.getElementById('btn');
+            oBtn.onclick=function(){
+                oTx.value='45613274';
+            };
+        };
+    </script>
+</head>
+<body>
+<input type="text" id="tx" />
+<input type="button" id="btn" value="改变内容"/>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>数组的其他操作</title>
+    <script>
+        arr=[6,2,8,9,11,115,555,7];
+        array=['a','b','c'];
+
+
+        //链接两个数组concat():
+        alert(arr.concat(array));//把array这个数组拼接到arr这个数组中
+        arr.sort();//会将数组的元素按照字符串的大小进行排列，即a-z
+        alert(arr);
+
+
+        //用sort（）排列数字数组的顺序
+        arr.sort(function(n1,n2){
+            return n1-n2;//等同于下面的if语句
+            /*
+            if(n1<n2){
+                return -1;//只要返回值是负数就行
+            }
+            else if(n1>n2){
+                return 1;//返回值是正数就行
+            }
+            else{
+                return 0;
+            }
+            */
+        });
+        alert(arr);
+
+
+        //数组的连接符 join
+        alert(arr.join('--*--'));//后期用于拼接网站用。
+    </script>
+</head>
+<body>
+
+</body>
+</html>

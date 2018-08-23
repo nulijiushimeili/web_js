@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>阻止默认事件1.0</title>
+    <script>
+        window.onload=function(){
+            document.oncontextmenu=function(){   //阻止默认事件，即鼠标右键弹出的菜单。
+                return false;
+            };
+        };
+    </script>
+</head>
+<body>
+
+</body>
+</html>

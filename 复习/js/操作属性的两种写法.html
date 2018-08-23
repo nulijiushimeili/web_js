@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>操作属性的两种写法</title>
+    <script>
+        function setText(){
+            var oIpt=document.getElementById('ipt1');
+            //第一种写法：
+            //oIpt.value='sadaff';
+            //第二种写法：
+            oIpt['value']='gwerggh';//用[]代替.（当要修改的属性不固定的时候使用）
+        }
+    </script>
+</head>
+<body>
+<input type="text" value="123456" id="ipt1"/>
+<input type="button" value="改变文字" onclick="setText()"/>
+</body>
+</html>

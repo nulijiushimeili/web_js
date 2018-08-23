@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>open_newPage</title>
+    <script>
+        window.onload=function (ev) {
+            var oArea = document.getElementById('area');
+            var oSub = document.getElementById('sub');
+            oSub.onclick=function (ev2) {
+                var oNewWindow=window.open("about:_blank","_blank");
+                oNewWindow.document.write(oArea.value);
+
+            }
+        }
+    </script>
+</head>
+<body>
+<form action="">
+    <textarea name="" id="area" cols="30" rows="10"></textarea>
+    <input type="submit" value="提交" id="sub">
+</form>
+</body>
+</html>

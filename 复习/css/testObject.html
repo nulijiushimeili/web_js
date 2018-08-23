@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>testObject</title>
+</head>
+<body>
+
+<script type="text/html">
+
+    
+    
+    //创建一个构造函数,构造函数,首字母要大写
+    function Person() {
+        var obj = Object();
+        obj.name = null;
+        obj.age = null;
+        obj.gender = null;
+
+        obj.study = function(){
+            console.log(this.name + " love study")
+        }
+
+        return obj;
+    }
+
+    var p1 = Person();
+    p1.name = "小明";
+    var p2 = Person();
+    p2.name = "小红";
+    p2.study();
+    console.log(p1 === p2);
+
+
+
+</script>
+<script>
+
+    function Dog(name,age) {
+        this.name = name;
+        this.age = age;
+
+        this.run = function () {
+            console.log(this.name + "在跑");
+        }
+
+    }
+
+    //自己创建的对象要new出来才能用
+    var smallDog = new Dog("小黄");
+    smallDog.run();
+
+</script>
+
+
+</body>
+</html>

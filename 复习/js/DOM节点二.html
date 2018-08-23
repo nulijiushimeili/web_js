@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM节点二</title>
+    <style>
+
+    </style>
+    <script>
+        window.onload=function () {
+            var oUl=document.getElementById('ul1');
+            if(oUl.firstElementChild)
+            {
+                oUl.firstElementChild.style.background='red';//其他高版本浏览器兼容
+            }
+            else
+            {
+                oUl.firstChild.style.background='red';  //只在IE6-8下没有兼容问题
+            }
+        };
+    </script>
+</head>
+<body>
+<h1>DOM节点二</h1>
+<h2>首尾子节点</h2>
+<p>firstChild----第一个子节点------firstElementChild</p>
+<p>lastChild-----最后一个子节点----lastElementChild</p>
+<ul id="ul1">
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<p>
+    window.onload=function () { <br>
+    var oUl=document.getElementById('ul1');<br>
+    if(oUl.firstElementChild)<br>
+    {<br>
+    oUl.firstElementChild.style.background='red';//其他高版本浏览器兼容<br>
+    }<br>
+    else<br>
+    {<br>
+    oUl.firstChild.style.background='red';  //只在IE6-8下没有兼容问题<br>
+    }<br>
+    };<br>
+</p>
+<h2>兄弟节点</h2>
+<p>nextSibling-------下一个兄弟节点-------nextElementSibling</p>
+<p>previousSibling---上一个兄弟节点-------previousElementSibling</p>
+<p>注意点：</p>
+<p>兄弟节点和首尾子节点一样，都有兼容问题，处理方法也相同</p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后代选择器</title>
+    <style>
+        /*后代选择器*/
+        div p{
+            color : red ;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+<div>
+    <p>测试后代选择器</p>
+    <p>先找到div tag ,然后找到子代的tag 名为p的</p>
+    <ul>
+        <li>
+            <p>这个也是后代</p>
+            <p>无论你是儿子,还是孙子,都会被选中</p>
+        </li>
+    </ul>
+</div>
+<p>这个不是后代选择器</p>
+</body>
+</html>

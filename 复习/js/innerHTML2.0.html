@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>innerHTML2.0</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div1{
+            margin: 0 auto;
+            width: 370px;
+            height: 756px;
+            background-color: #ccc;
+            border: 1px solid black;
+
+        }
+        #div1 ul li{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 1px solid black;
+            float: left;
+
+            list-style: none;
+            text-align: center;
+            line-height: 100px;
+        }
+        #div1 div{
+            float: left;
+            width: 350px;
+            height: 260px;
+            background-color: #999;
+            border: 1px solid black;
+            margin-left: 10px;
+        }
+        .active{
+            background-color: #f00;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oDiv1=document.getElementById('div1');
+            var aLi=oDiv1.getElementsByTagName('li');
+            var aDiv=oDiv1.getElementsByTagName('div')[0];
+            var arr=['快要过年了','春节了','春天了','清明了','劳动节','儿童节','建党节','建军节','中秋节','国庆节','冬天来了','一年又要过完了'];
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].index=i;
+                aLi[i].onmouseover=function(){
+                    for(var i=0;i<aLi.length;i++){
+                        aLi[i].className='';
+                    }
+                    this.className='active';
+                    aDiv.innerHTML='<h2>'+(this.index+1)+'月提示</h2>'+arr[this.index];
+                }
+
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="div1">
+    <ul>
+        <li class="active">一月</li>
+        <li>二月</li>
+        <li>三月</li>
+        <li>四月</li>
+        <li>五月</li>
+        <li>六月</li>
+        <li>七月</li>
+        <li>八月</li>
+        <li>九月</li>
+        <li>十月</li>
+        <li>十一月</li>
+        <li>十二月</li>
+    </ul>
+    <div id="div2">12416546</div>
+</div>
+</body>
+</html>

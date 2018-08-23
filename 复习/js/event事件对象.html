@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>event事件对象</title>
+    <script>
+        window.onload=function(){
+
+            document.onclick=function(ev){   //ev要作为一个参数传进来
+                var oEvent=ev||event;
+                alert(oEvent.clientX+','+oEvent.clientY);
+            }
+        }
+
+
+    </script>
+</head>
+<body id="body">
+
+</body>
+</html>

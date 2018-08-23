@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM_open</title>
+    <script>
+        window.onload=function () {
+            var oArea=document.getElementById('area');
+            var oBtn=document.getElementById('btn');
+            oBtn.onclick=function () {
+                //第二个参数取值为_blank/_self，和a标签的取值一样，选择在当前页面打开还是打开一个新页面。
+                var oNewWin=window.open('about:blank','_blank');
+                //在新打开的页面中写入xxx
+                oNewWin.document.write(oArea.value);
+            }
+        }
+    </script>
+</head>
+<body>
+<textarea name="" id="area" cols="60" rows="20"></textarea>
+<input type="button" id="btn" value="submit">
+</body>
+</html>

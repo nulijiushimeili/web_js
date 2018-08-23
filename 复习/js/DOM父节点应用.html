@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM父节点</title>
+    <style>
+        h1,h2{
+            color:red;
+        }
+        p,ul{
+            color:blue;
+            font:24px "微软雅黑";
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var aA=document.getElementsByTagName('a');
+            for(var i=0;i<aA.length;i++)
+            {
+                aA[i].onclick=function () {
+                    this.parentNode.style.display='none';
+                };
+            }
+        };
+    </script>
+</head>
+<body>
+<h1>DOM父节点</h1>
+<ul id="ul1">
+    <li>sdfsdfsdfsdfsd<a href="javascript:">隐藏</a></li>
+    <li>dfsddddddfsdvcxz<a href="javascript:">隐藏</a></li>
+    <li>456456412312313<a href="javascript:">隐藏</a></li>
+    <li>weweweweweweewew<a href="javascript:">隐藏</a></li>
+    <li>vvvvvvvvvvvvs<a href="javascript:">隐藏</a></li>
+</ul>
+
+</body>
+</html>

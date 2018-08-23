@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>非常厉害的选择器</title>
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+            background: red;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+                    var oLi_5=document.getElementsByTagName('div')[0].getElementsByTagName('ul')[1].getElementsByTagName('li')[4];
+                    oLi_5.style.background='blue';
+        };
+    </script>
+
+</head>
+<body>
+
+
+<div>
+    <ul></ul>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li class="box"></li>
+    </ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数传参-第二种写法的应用</title>
+    <style>
+        #div1{
+            height: 200px;
+            width: 200px;
+            background: #8fff78;
+        }
+    </style>
+    <script>
+        //函数中有几个只要改变，就传递几个参数
+        function gaibian(name,duoshao) {
+            var oDiv=document.getElementById('div1');
+            oDiv.style[name]=duoshao;
+        }
+    </script>
+</head>
+<body>
+<input type="button"value="变宽"onclick="gaibian('width','400px')">
+<input type="button"value="变高"onclick="gaibian('height','400px')">
+<input type="button"value="变色"onclick="gaibian('background','red')">
+<div id="div1"></div>
+</body>
+</html>

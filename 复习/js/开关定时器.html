@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>开光定时器</title>
+    <script>
+        window.onload=function () {
+            var btn1 = document.getElementById('ipt1');
+            var btn2 = document.getElementById('ipt2');
+            var timer = null;   指定定时器的名称
+            btn1.onclick = function () {
+                timer = setInterval(function () {    //设置间隔性定时器 setInterval（函数，多少毫秒）；
+                        alert('a');
+                    }
+                    , 2000);
+            }
+            btn2.onclick = function () {
+                clearInterval(timer);       //指定要关闭哪个定时器
+            };
+        }
+    </script>
+</head>
+<body>
+<input id="ipt1" type="button"value="start" >
+<input id="ipt2" type="button" value="finish">
+</body>
+</html>

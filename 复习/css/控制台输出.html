@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test_console_output</title>
+    <script type="text/html">
+        window.onload = function (ev) {
+            console.log("start load page");
+            console.warn("this is warning message");
+            console.error("this is a error message");
+        }
+    </script>
+</head>
+<body>
+
+
+<script type="text/html">
+    window.prompt("请输入信息就行")
+
+</script>
+<script type="text/html">
+    //这个和alert()差不多,只不过有确定和取消按钮,一般会搭配if-else使用
+    confirm("是否继续?")
+</script>
+<script type="text/html">
+    //注意点:在js中,是严格区分大小写的,
+
+</script>
+<script>
+    //js中的面向对象
+    var dog = {
+        name : "wangcai",
+        age : 12,
+        dogFriends : ["ahuang","dahei"],
+        eat : function () {
+            console.log("wangcai is eating now");
+        }
+    }
+    console.log("dog的数据类型是:" + (typeof dog));
+    console.log(dog.name);
+    console.log(dog.age);
+    console.log(dog.dogFriends);
+    dog.eat();
+</script>
+
+</body>
+</html>

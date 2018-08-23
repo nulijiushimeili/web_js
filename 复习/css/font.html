@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>font</title>
+    <style>
+        p{
+            /*设置字体样式的时候,如果前面的字体样式找不到,系统会自动寻找后面的字体样式,*/
+            /*中文字体样式是包含英文字体样式的,而英文字体是不包含中文样式的,*/
+            /*可以通过先设置英文字体样式,后设置中文字体样式,分别给英文和中文设置字体样式*/
+            font-family: "乱七八糟的字体" ,Arial ,"微软雅黑",serif;
+            font-size: 30px;
+            color:red;
+            font-style: italic;
+            font-weight: bold;
+            /*text-decoration: underline;*/
+            text-decoration: overline;
+            /*这四种属性可以一次性设置*/
+            /*size family 属性是不能删除的,否则没有效果*/
+            /*font:italic bold 30px "楷体";*/
+            /*/文本位置*/
+            text-align: center;
+            /*文本缩进*/
+            text-indent: 2em;
+        }
+        a{
+            text-decoration: none;
+
+        }
+    </style>
+</head>
+<body>
+
+<p>abcdefg</p>
+<p>努力就是魅力</p>
+<a href="#"> /*text-decoration: none;*/</a>
+</body>
+</html>

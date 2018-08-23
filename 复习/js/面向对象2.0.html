@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>面向对象2.0</title>
+    <script>
+        function creatPerson(name,agee) {       //构造函数
+            var obj = Object();
+            obj.name = name;
+            obj.aage= agee;
+            obj.show= function () {
+                alert(obj.name+'的年龄是：'+obj.aage);
+            };
+            return obj;
+        }
+        var obj=creatPerson('张三','20');
+        obj.show();
+        var obj2=creatPerson('李四','66');
+        obj2.show();
+        //可以无限添加对象，但是代码非常简单。
+    </script>
+</head>
+<body>
+
+</body>
+</html>

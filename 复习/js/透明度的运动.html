@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>透明度的运动</title>
+    <style>
+        #div{
+            width: 400px;
+            height: 400px;
+            background-color: red;
+            opacity: 0.1;
+            filter: Alpha(Opacity=10);
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oDiv=document.getElementById('div');
+            var timer=null;
+            var alpha=30;
+            var speed=0;
+            function startMove(iTaget){
+                timer=setInterval(function(){
+                    if(alpha<iTaget){
+                        speed=1;
+                    }
+                    else
+                    {
+                        speed=-1;
+                    }
+                    if(alpha==iTaget){
+                        clearInterval(timer);
+                    }
+                    else
+                    {
+                        alpha+=speed;
+                        oDiv.style.opacity=alpha/100;               //处理兼容
+                        oDiv.style.filter='Alpha(Opacity='+alpha+')';   //处理兼容
+                    }
+
+                },30);
+            };
+            oDiv.onmouseover=function(){
+                startMove(100);
+            };
+
+            oDiv.onmouseout=function(){
+                startMove(30);
+            };
+
+        }
+    </script>
+</head>
+<body>
+<div id="div">
+
+</div>
+</body>
+</html>

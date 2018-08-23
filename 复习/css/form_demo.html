@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>formdemo</title>
+    <script>
+        window.onload=function (ev) {
+            var aIpts = document.getElementsByClassName("select");
+            // //alert(oIpts.item(0));
+            // oIpts.item(0).onfocus=function () {
+            //     this.value="dsf";
+            // };
+            // oIpts.item(1).onfocus=function () {
+            //     this.value="fsdjkl";
+            // };
+            for(var i=0;i<aIpts.length;i++){
+                aIpts[i].onfocus=function () {
+                    this.value="jflksd";
+                }
+            }
+
+        };
+    </script>
+</head>
+<body>
+
+<form action="" >
+    <p>
+        账号:<input type="text" class="select">
+    </p>
+    <p>
+        密码:<input type="password" class="select">
+    </p>
+    <p>
+        <input type="radio" checked="checked" name="gender">男
+        <input type="radio" name="gender">女
+        <input type="radio" name="gender">保密
+    </p>
+    <p>爱好</p>
+    <p>
+        <input type="checkbox">音乐
+        <input type="checkbox">电影
+        <input type="checkbox">运动
+    </p>
+    <p>个人简介:</p>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <p>
+        生日:<input type="date" />
+    </p>
+    <p>
+        邮箱:<input type="email" />
+    </p>
+    <p>
+        电话:<input type="number" />
+    </p>
+    <p>
+        <input type="submit" value="注册">
+        <input type="reset" value="清空">
+    </p>
+
+    &nbsp;显示一个空格 <br>
+    &lt;&gt;大于号和小于号 <br>
+    &copy; 版权符号 <br>
+</form>
+
+<!--<script>-->
+    <!--alert(window.location.port);-->
+<!--</script>-->
+
+</body>
+</html>

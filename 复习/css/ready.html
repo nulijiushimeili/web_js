@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>document.ready</title>
+    <style>
+        .div1{
+            height: 100px;
+            width: 100px;
+        }
+        .red{
+            background-color: #f00;
+        }
+        .green{
+            background-color: #0f0;
+        }
+    </style>
+    <script src="jQuery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            // alert("hello word ");
+
+            //绑定事件
+            // $('#btn').bind("click",function () {
+            //     alert("hello jquery");
+            // })
+
+
+
+
+
+
+
+
+
+
+
+
+
+        });
+        window.onload=function (ev) {
+            //toggle
+            // $('#btn').toggle(function () {
+            //     $('#div1').removeClass("green");
+            //     $('#div1').addClass("red");
+            // },function () {
+            //     $('#div1').removeClass("red");
+            //     $('#div1').addClass("green");
+            // })
+            $(".bt").click(function(){
+                $("p").toggle();
+            });
+        }
+    </script>
+</head>
+<body>
+<button id="btn">按钮</button>
+<div id="div1" class="div1 green" ></div>
+<p>This is a paragraph !</p>
+<button class="bt">button</button>
+
+</body>
+</html>

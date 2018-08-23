@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>样式的优先级</title>
+    <style>
+        .box{
+            background-color: #f00;
+        }
+        #div1{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function toRed(){
+            var oDiv=document.getElementById('div1');
+            oDiv.className='box';
+        }
+        function toGreen(){
+            var oDiv=document.getElementById('div1');
+            oDiv.style.background='green';
+        }
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+<input type="button" value="变红" onclick="toRed()"/>
+<input type="button" value="变绿" onclick="toGreen()"/>
+<p>因为class的优先级没有行间样式的优先级高，所以先变绿后变红不靠谱。</p>
+<p>优先级的排列顺序：行间样式 > id > class > *</p>
+<p>修改class名时候，要用className，因为class是关键字。</p>
+</body>
+</html>

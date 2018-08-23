@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+    <style>
+        /*细线表格设置*/
+        table{
+            background-color: #000;
+            cellspacing:1px;
+        }
+        tr{
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <caption><h2>标题</h2></caption>
+    <tr>
+        <td>dfsgdfgdfd</td>
+        <td>dfsgdfgdfd</td>
+        <td>dfsgdfgdfd</td>
+        <td>dfsgdfgdfd</td>
+        <td>dfsgdffdfd</td>
+    </tr>
+    <tr>
+        <td>fdjsldk</td>
+        <td>fdjsldk</td>
+        <td>fdjsldk</td>
+        <td>fdjsldk</td>
+        <td>fdjsldk</td>
+    </tr>
+    <tr>
+        <td>2sdf;lfs</td>
+        <td>4sdf;lfs</td>
+        <td>5sdf;lfs</td>
+        <td>6sdf;lfs</td>
+        <td>7sdf;lfs</td>
+    </tr>
+    <tr>
+        <td>sdalklfsjdk</td>
+        <td>sdalklfsjdk</td>
+        <td>sdalklfsjdk</td>
+        <td>sdalklfsjdk</td>
+        <td>sdalklfsjdk</td>
+    </tr>
+</table>
+
+<!--
+表格标签
+表格标签的作用：
+表格标签是用来给一堆数据添加表格语义的。表格是一种数据的展现形式，当数据量非常大的时候，表格这种展现形式被认为是最为清晰的展现形式。
+
+表格标签的格式：
+< table>
+< tr> //行
+< td>< /td> //列
+< td>< /td>
+< td>< /td>
+< /tr>
+< tr>
+< td>< /td>
+< td>< /td>
+< td>< /td>
+< /tr> < /table>
+
+PS: 表格标签中的table代表整个表格。
+
+--表格标签中的tr代表整个表格中的一行数据，也就是一堆tr标签就是表格中的一行。
+
+--表格中的td标签代表表格标签中一行中的一个单元格，也就是说一对td标签就是一行中的一个单元格。
+
+注意点：表格标签有一个边框属性，这个属性决定了边框的宽度，默认情况下这个属性的值为0，所以看不到边框。（border="0"）
+
+以下内容仅作为了解，样式都是通过css来实现
+表格标签的属性
+表格示例
+1.1	1.2
+2.1	2.2
+1.width和height
+-表格标签的宽度和高度默认是根据内容的尺寸来调整的，也可以通过table来设置width/height属性来指定表格的宽度和高度
+
+-如果给td标签设置width/height属性，只会修改当前单元格的宽度，不会影响整个表格的宽度和高度。
+
+2.水平对齐和垂直对齐的属性
+-其中水平对齐可以给table标签、tr标签和td标签使用，垂直对齐只能给tr标签和td标签使用
+
+-给table标签设置align属性，可以控制表格在水平方向的对齐方式
+
+-给tr标签设置align属性,可以控制当前行中所有表格在水平方向的对齐方式
+
+-给td标签设置align属性，可以控制当前单元格中的内容在水平方向的对齐方式
+
+注意点：如果既在td中设置align属性，又在tr中设置align属性，那么会按照td中设置的来对齐。
+
+-给tr标签设置valign属性，可以控制当前行中所有单元格的内容在垂直方向的对齐方式
+
+-给td标签设置valign属性，可以控制当前单元格中的内容在垂直方向的对齐方式
+
+注意点：如果既在td中设置valign属性，又在tr中设置valign属性，那么会按照td中设置的来对齐。
+
+外边距和内边距的属性
+---只能给table标签使用
+
+-外边距是单元格与单元格之间的距离，默认是2px
+
+-内边距是内容与单元格边框的间隙，默认是1px
+
+细线表格
+1.给table设置background-color="black"
+
+3.给table设置背景色外边距cellspacing="1px"
+
+2.给tr设置background-color="write"
+
+示例
+1.1	1.2
+2.1	2.2
+.t1{ cellspacing:1px; background-color: #000; height: 50px; width: 300px; } .t1 tr{ background-color: #fff; }
+
+-->
+</body>
+</html>

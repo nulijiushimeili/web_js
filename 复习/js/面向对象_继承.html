@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>面向对象_继承</title>
+    <script>
+        /*
+        以下这段代码有BUG。
+         */
+        function A()
+        {
+            this.abc=12;
+        }
+        A.prototype.show=function()
+        {
+            alert(this.abc);
+        }
+        function B()
+        {
+            A.call(this);       //把A的属性赋给B
+        }
+        B.prototype= A.prototype;
+        //把A的原型直接赋给B，在系统中只是直接让B的原型的地址=A的原型的地址，B所附带的属性也会被A所拥有，从而导致BUG出现
+        var obj=new B();
+        //alert(obj.abc);
+        obj.show();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>full_table</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            border:1px solid #000000;
+        }
+        tr,td{
+            border-collapse: collapse;
+            border:1px solid #000000;
+        }
+    </style>
+</head>
+<body>
+
+<!--一般在企业开发中用不到表格的完整格式,-->
+<!--thead,tfoot有自己默认的高度,如果给表格设置高度,这两个属性的值不会随着自己的设定而发生改变-->
+
+<table>
+    <caption>学生信息</caption>
+    <thead>
+        <tr>
+            <td>学号</td>
+            <td>姓名</td>
+            <td>年龄</td>
+            <td>性别</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>小明</td>
+            <td>15</td>
+            <td>男</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>小华</td>
+            <td>14</td>
+            <td>男</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>小红</td>
+            <td>14</td>
+            <td>女</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>小美</td>
+            <td>14</td>
+            <td>女</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tfoot>
+</table>
+
+</body>
+</html>

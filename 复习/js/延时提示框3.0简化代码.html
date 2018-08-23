@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>延时提示框3.0代码简化</title>
+    <style>
+        #div1{
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+            margin: 10px;
+            float: left;
+        }
+        #div2{
+            width: 250px;
+            height: 200px;
+            background-color: #ccc;
+            margin: 10px;
+            float: left;
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oDiv1=document.getElementById('div1');
+            var oDiv2=document.getElementById('div2');
+            var timer=null;
+            oDiv2.onmouseover=oDiv1.onmouseover=function(){
+                clearInterval(timer);
+                oDiv2.style.display='block';
+            };
+            oDiv2.onmouseout=oDiv1.onmouseout=function(){
+                timer=setInterval(function(){
+                    oDiv2.style.display='none';
+                },500);
+            };
+            /*
+            oDiv2.onmouseover=function(){
+                clearInterval(timer);
+                oDiv2.style.display='block';
+            };
+            oDiv2.onmouseout=function(){
+                timer=setInterval(function(){
+                    oDiv2.style.display='none';
+                },500);
+            };
+            */
+        };
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+</body>
+</html>

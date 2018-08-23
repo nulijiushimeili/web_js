@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>求多个数的和</title>
+    <script>
+        function sum() {
+            var result=0;
+            for (i = 0; i < arguments.length; i++)    //arguments是数组
+            {
+                result+=arguments[i];    //arguments   可变参  不定参
+            }
+            return result;
+        }
+        alert(sum(12,15,16,10));
+    </script>
+</head>
+<body>
+<p>function sum() {
+    var result=0;
+    for (i = 0; i < arguments.length; i++)    //arguments是数组
+    {
+    result+=arguments[i];  //arguments   可变参  不定参
+    }
+    return result;
+    }
+    alert(sum(12,15,16,10));</p>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>change_schema</title>
+    <style>
+        div, input {
+            margin: 0;
+            padding: 0;
+        }
+
+        #div1 {
+            width: 400px;
+            height: 500px;
+        }
+
+        input {
+            width: 92px;
+            height: 20px;
+        }
+
+        #div1 div {
+            width: 400px;
+            height: 380px;
+            background-color: #ccc;
+            border: 1px solid #777;
+            display: none;
+        }
+
+        .active {
+            background-color: #ff0;
+        }
+    </style>
+    <script>
+        window.onload = function (ev) {
+            var oDiv1 = document.getElementById('div1');
+            var aButton = oDiv1.getElementsByTagName('input');
+            var aDiv2 = oDiv1.getElementsByTagName('div');
+            for (var i = 0; i < aButton.length; i++) {
+                aButton[i].index = i;
+                aButton[i].onmouseover = function (ev2) {
+                    for (var i = 0; i < aButton.length; i++) {
+                        aButton[i].className = "";
+                        aDiv2[i].style.display = "none";
+                    }
+                    this.className = "active";
+                    aDiv2[this.index].style.display = "block";
+                }
+
+            }
+
+        }
+
+
+    </script>
+</head>
+<body>
+<div id="div1">
+    <input type="button" value="第一页">
+    <input type="button" value="第二页">
+    <input type="button" value="第三页">
+    <input type="button" value="第四页">
+    <div style="display: block">这是第一页</div>
+    <div>222222222222222222222222</div>
+    <div>333333333333333333333333</div>
+    <div>444444444444444444444444</div>
+</div>
+
+</body>
+</html>

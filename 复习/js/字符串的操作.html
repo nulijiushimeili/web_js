@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串的操作</title>
+    <script>
+        var str='abcdefghijk';
+        //查找字符串
+        alert(str.search('d'));     //返回查找字符串的位置，找不到返回-1
+        //截取字符串substring(截取字符串的首地址，截取字符串的末地址),不包括结束位置
+        alert(str.substring(2,5));
+        //charAt(要返回的第几位的字符),返回字符串的某一位
+        alert(str.charAt(3));
+        //切分字符串split(分隔符);
+        var str2='12-65-69-20';
+        var arr=str2.split('-');        //返回的是一个数组
+        alert(arr);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

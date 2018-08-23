@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>数码时钟2.0</title>
+    <script>
+        function toDouble(n){
+            var m;
+            if(n<10){
+                m='0'+n;
+            }
+            else
+            {
+                m=n+'';
+            }
+            return m;
+        }
+        window.onload=function(){
+            var aImg=document.getElementsByTagName('img');
+            function show(){
+                var oDate=new Date();
+                var str=toDouble(oDate.getHours())+toDouble(oDate.getMinutes())+toDouble(oDate.getSeconds());
+                //alert(str);
+                for(var i=0;i<aImg.length;i++){
+
+                        aImg[i].src='images/number/'+str.charAt(i)+'.jpg';//字符串.charAt()是获取字符串的某一位，这种写法兼容所有浏览器。
+
+                }
+            }
+            setInterval(show,1000);
+            show();
+        }
+
+    </script>
+</head>
+<body>
+<img src="images/number/0.jpg" alt=""/>
+<img src="images/number/0.jpg" alt=""/>
+：
+<img src="images/number/0.jpg" alt=""/>
+<img src="images/number/0.jpg" alt=""/>
+：
+<img src="images/number/0.jpg" alt=""/>
+<img src="images/number/0.jpg" alt=""/>
+</body>
+</html>

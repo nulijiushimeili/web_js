@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>面向对象_继承1.0</title>
+    <script>
+        function A()
+        {
+            this.abc=12;
+        }
+        A.prototype.show=function()
+        {
+            alert(this.abc);
+        }
+        function B()
+        {
+            A.call(this);
+        }
+        //B.prototype= A.prototype;
+
+        for(var i in A.prototype)
+        {
+            B.prototype[i]= A.prototype[i];
+        }
+
+        //下面是测试BUG的代码
+        B.prototype.fn=function()
+        {
+            alert(this.abc+1);
+        }
+        var objB=new B();
+        var objA=new A();
+        objB.show();
+        objA.fn();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

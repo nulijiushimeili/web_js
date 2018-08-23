@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM子节点</title>
+    <style>
+
+        h1,h2{
+            color: #f00;
+        }
+        p{
+            font:24px "微软雅黑";
+            color: blue;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oUl=document.getElementById('ul1');
+            /*alert(oUl.childNodes.length);  //IE6-8显示为5个节点，其他的浏览器显示为11个节点*/
+            for(var i=0;i<oUl.childNodes.length; i ++)
+            {
+                /*oUl.childNodes[i].style.background='red';  //这样设置是不起作用的。
+                 oUl.childNodes[0].style不存在，他是一个文本节点，也是一个无法选中的节点。
+                 */
+                /*alert(oUl.childNodes[i].nodeType);
+                 nodeType==3;     文本节点     nodeType()节点类型
+                 nodeType==1；    元素节点
+                 */
+                if(oUl.childNodes[i].nodeType==1)
+                {
+                    oUl.childNodes[i].style.background='red';
+                    /* 这种写法适用于所有的浏览器*/
+                }
+            }
+            alert(oUl.children.length);//children这个属性直接返回元素节点，使用更方便。
+        }
+    </script>
+</head>
+<body>
+<h1>DOM节点</h1>
+<h2>节点操作示例</h2>
+<ul id="ul1">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<p>
+    window.onload = function () { <br>
+    var oUl=document.getElementById('ul1');<br>
+    /*alert(oUl.childNodes.length);  //IE6-8显示为5个节点，其他的浏览器显示为11个节点*/<br>
+    for(var i=0;i< oUl.childNodes.length; i ++)<br>
+    {<br>
+    /*oUl.childNodes[i].style.background='red';  //这样设置是不起作用的。<br>
+    oUl.childNodes[0].style不存在，他是一个文本节点，也是一个无法选中的。<br>
+    */<br>
+    /*alert(oUl.childNodes[i].nodeType);<br>
+    nodeType==3;     文本节点     nodeType()节点类型<br>
+    nodeType==1；    元素节点<br>
+    */<br>
+    if(oUl.childNodes[i].nodeType==1)<br>
+    {<br>
+    oUl.childNodes[i].style.background='red';<br>
+    /* 这种写法适用于所有的浏览器*/<br>
+    }<br>
+    }<br>
+    alert(oUl.children.length);//children这个属性直接返回元素节点，使用更方便。<br>
+    }
+</p>
+<h2>注意点</h2>
+<p>childNodes和children都只是选中了子元素节点不会选中子元素下的其他元素</p>
+</body>
+</html>

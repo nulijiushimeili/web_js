@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组与for循环应用</title>
+    <script>
+        window.onload=function()
+        {
+            var anniu=document.getElementById('btn');
+            var dd=document.getElementById('div1');
+            var anniu1=document.getElementById('btn1');
+            var anniu2=document.getElementById('btn2');
+            var shuzu=dd.getElementsByTagName('input');
+
+            anniu.onclick=function ()
+            {
+                for(var i=0;i<shuzu.length;i++)//length是数组长度
+                {
+                    shuzu[i].checked=true;
+                }
+            }
+            anniu1.onclick=function ()
+            {
+                for(var i=0;i<shuzu.length;i++)
+                {
+                    shuzu[i].checked=false;
+                }
+            }
+            anniu2.onclick=function ()
+            {
+                var i=0;
+                while(i<shuzu.length)
+                {
+                    if(shuzu[i].checked==true)//注意是恒等于
+                    {
+                        shuzu[i].checked=false;
+                    }else {
+                        shuzu[i].checked=true;
+                    }
+                    i++;
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+<input id="btn" type="button" value="全选">
+<input id="btn1" type="button" value="不选">
+<input id="btn2" type="button" value="反选">
+<div id="div1">
+    <input type="checkbox"><br>
+    <input type="checkbox"><br>
+    <input type="checkbox"><br>
+    <input type="checkbox"><br>
+    <input type="checkbox"><br>
+    <input type="checkbox"><br>
+    <input type="checkbox"><br>
+    <input type="checkbox"><br>
+    <input type="checkbox"><br>
+    <input type="checkbox"><br>
+    <input type="checkbox"><br>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onload</title>
+    <script>
+        onload = function (ev) {
+            var oIpt = document.getElementById('ipt');
+            var oDiv = document.getElementById('div1');
+
+
+            // function al() {
+            //     alert("hello");
+            // }
+
+            // oIpt.onfocus=function (ev) {
+            //     oDiv.innerText="hello";
+            // }
+            // oIpt.onblur=function (ev) {
+            //     oDiv.innerText="click me";
+            //
+            // }
+
+            var oForm1 = document.getElementById('form1');
+            oForm1.onsubmit=function (ev2) {
+                alert(oIpt.value);
+                return false;
+            }
+        };
+
+
+    </script>
+</head>
+<body >
+<form action="" id = "form1">
+    <input type="text" id="ipt">
+    <input type="submit" value="submit">
+</form>
+<div id="div1"></div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>侧边隐藏栏1.0</title>
+    <style>
+        #div1{
+            width: 300px;
+            height: 500px;
+            background-color: green;
+            position: absolute;
+            left: -300px;
+        }
+        #div1 span{
+            width: 20px;
+            height: 60px;
+            background-color: red;
+            position: absolute;
+            top: 220px;
+            right: -20px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oDiv=document.getElementById('div1');
+            var timer=null;
+            function startMove(mubiao){
+                var speed=0;
+                clearInterval(timer);
+                timer=setInterval(function(){
+                    if(oDiv.offsetLeft==mubiao) {
+                        clearInterval(timer);
+                    }
+                    else
+                    {
+                        if(oDiv.offsetLeft<mubiao)
+                        {
+                            speed=10;
+                        }
+                        else
+                        {
+                            speed=-10;
+                        }
+                        oDiv.style.left = oDiv.offsetLeft + speed + 'px';
+                    }
+
+                },30);
+
+            }
+
+            oDiv.onmouseover=function(){
+                startMove(0);
+            };
+            oDiv.onmouseout=function(){
+                startMove(-300);
+            };
+
+        }
+    </script>
+</head>
+<body>
+<div id="div1">
+    <span>分享到</span>
+</div>
+</body>
+</html>

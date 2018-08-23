@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子节点</title>
+    <script>
+        window.onload=function () {
+            var oUl=document.getElementById('ul1');
+            //alert(oUl.childNodes.length);
+            for(var i=0;i<oUl.childNodes.length;i++)
+            {
+                if(oUl.childNodes[i].nodeType==1)
+                {
+                    oUl.childNodes[i].style.background='red';
+                }
+                //nodeType=3   遇到的是文本节点
+                //nodeType=1   遇到的是元素节点
+            }
+        };
+    </script>
+</head>
+<body>
+<ul id="ul1">
+    <li>
+        <span>子节点只会算第一层，子节点里面有东西不算</span>
+    </li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+</html>

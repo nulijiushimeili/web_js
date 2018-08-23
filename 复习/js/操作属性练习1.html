@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>操作属性练习1</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background-color: #999;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"
+     onmouseover=
+        "document.getElementById('div1').style.width='400px';
+        document.getElementById('div1').style.height='400px';
+        document.getElementById('div1').style.background='#ccc';"
+     onmouseout=
+        "document.getElementById('div1').style.width='200px';
+        document.getElementById('div1').style.height='200px';
+        document.getElementById('div1').style.background='red';"
+     //行间样式使代码过于冗杂，且效率十分低下，编程中不适用此种写法。
+        >
+</div>
+</body>
+</html>

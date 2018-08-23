@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>用数组和循环操作标签</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            float: left;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oBtn=document.getElementById('btn1');//获取的是一个ID。
+            var oDiv=document.getElementsByTagName('div');//获取的是一个数组。
+            oBtn.onclick=function(){
+                for(i=0;i<oDiv.length;i++){
+                    oDiv[i].style.background='red';
+                };
+            };
+        };
+    </script>
+</head>
+<body>
+<input type="button" value="变红" id="btn1"/>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<p>循环的4要素：1.初始化。2.条件。3.语句。4.自增.</p>
+</body>
+</html>

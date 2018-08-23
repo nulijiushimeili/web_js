@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head> lang="en">
+    <meta charset="UTF-8">
+    <title>定时器的使用</title>
+    <style>
+
+    </style>
+    <script>
+        window.onload=function(){
+            var oBtn1=document.getElementById('btn1');
+            var oBtn2=document.getElementById('btn2');
+            var timer=null;
+            oBtn1.onclick=function(){
+                timer=setInterval(function(){
+                    alert('a');
+                },1000);//1秒钟执行一次弹窗
+            };
+            oBtn2.onclick=function(){
+                clearInterval(timer);
+            };
+        };
+
+    </script>
+</head>
+<body>
+<h2>setInterval(要执行的函数，执行间隔（毫秒）):设置一个定时器，每隔一段时间相应一次</h2>
+<h2>clearInterval(要关闭的定时器的名字)：关闭定时器</h2>
+<h2>setTimeout(要执行的函数，执行间隔（毫秒）)：设置一个定时器，等待一段时间再响应</h2>
+<input id="btn1" type="button" value="运行定时器" />
+<input id="btn2" type="button" value="关闭定时器" />
+</body>
+</html>

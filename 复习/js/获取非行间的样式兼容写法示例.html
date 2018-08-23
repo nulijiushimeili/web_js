@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>非行间样式的获取-兼容版</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background-color: #ccc;
+            border:1px solid black;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var oDiv=document.getElementById('div1');
+            if(oDiv.currentStyle)     //这种写法值兼容IE浏览器
+            {
+                alert(oDiv.currentStyle.width);//在这里进行属性操作
+            }
+            else
+            {
+                //下面的语句只能取单一样式
+                alert(getComputedStyle(oDiv,false).width);//其中第二个值可以随便填写。这种写法不兼容IE7以下的版本
+                //单一样式：width.height.position.background-color...
+                //复合样式：background.border.....
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+<div id="div1"></div>
+<h1>非行间样式的获取-兼容版</h1>
+<p>window.onload=function () {
+    var oDiv=document.getElementById('div1');
+    if(oDiv.currentStyle)     //这种写法值兼容IE浏览器
+    {
+    //下面的语句只能取单一样式
+    alert(oDiv.currentStyle.width);//在这里进行属性操作
+    }
+    else
+    {
+    //下面的语句只能取单一样式
+    alert(getComputedStyle(oDiv,false).width);//其中第二个值可以随便填写。这种写法不兼容IE7以下的版本
+    //单一样式：width.height.position.background-color...
+    //复合样式：background.border.....
+    }
+    }</p>
+</body>
+</html>

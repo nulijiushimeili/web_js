@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>序选择器</title>
+    <style>
+        /*p:first-child{*/
+            /*color : red ;*/
+        /*}*/
+
+        /*选择同级别同类型的第一个*/
+        p:first-of-type{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+
+
+<h1>我是标题</h1>
+<p>我是段落1</p>
+<p>我是段落2</p>
+<div>
+    <p>我是段落3</p>
+    <p>我是段落4</p>
+    <p>我是段落5</p>
+</div>
+
+
+<p>p:first-child</p>
+<p>p:last-child</p>
+<p>p:nth-child</p>
+<p>p:nth-last-child</p>
+<p>p:only-child</p>
+<br>
+<p>p:first-of-type</p>
+<p>p:last-of-type</p>
+<p>p:nth-of-type</p>
+<p>p:nth-last-of-type</p>
+<p>p:only-of-type</p>
+
+</body>
+</html>

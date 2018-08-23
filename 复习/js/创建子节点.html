@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建子节点</title>
+    <script>
+        window.onload=function () {
+            var oBtn=document.getElementById('btn1');
+            var oUl=document.getElementById('ul1');
+            var oTxt=document.getElementById('iptext');
+            oBtn.onclick=function () {
+                var oLi=document.createElement('li');
+                oLi.innerHTML=oTxt.value;
+                oUl.appendChild(oLi);
+                oTxt.value='';
+            };
+        };
+    </script>
+</head>
+<body>
+<h1>创建子节点</h1>
+<h2>createElement('要创建的标签名')---------创建子节点 </h2>
+<h2>父节点.appendChild(子节点)--------------给父元素添加子节点</h2>
+<input type="text" value="这里可以添加内容" id="iptext">
+<input id="btn1" type="button" value="创建li">
+<ul id="ul1"></ul>
+<p>代码如下</p>
+<p>
+    window.onload=function () { <br>
+    var oBtn=document.getElementById('btn1');<br>
+    var oUl=document.getElementById('ul1');<br>
+    var oTxt=document.getElementById('iptext');<br>
+    oBtn.onclick=function () {<br>
+    var oLi=document.createElement('li');<br>
+    oLi.innerHTML=oTxt.value;<br>
+    oUl.appendChild(oLi);<br>
+    oTxt.value='';<br>
+    };<br>
+    };<br>
+</p>
+</body>
+</html>

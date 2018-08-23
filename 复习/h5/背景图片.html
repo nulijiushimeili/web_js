@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景图片</title>
+    <style>
+        body{
+            background: url(img/robot.png) no-repeat fixed center top;
+        }
+        h1,h2{
+            color:red;
+        }
+        p,li{
+            font: 24px "微软雅黑";
+            color:blue;
+        }
+        div{
+            width: 435px;
+            height: 2000px;
+            float:left;
+        }
+
+    </style>
+</head>
+<body>
+<div></div>
+<h1>设置背景颜色</h1>
+<p>通过background-color设置背景颜色</p>
+<h1>设置背景图片</h1>
+<p>通过background-image: url();设置背景图片。</p>
+<p>--url（）中可以是网络图片，也可以是本地图片</p>
+<p>注意点：如果图片的大小没有标签中的空间那么大，那么图片会自动在水平方向和垂直方向平铺来填充</p>
+<h1>设置图片是否平铺</h1>
+<p>通过background-repeat:;来设置背景图片是否平铺</p>
+<ul>
+    <li>repeat;(默认)在水平和垂直方向都平铺</li>
+    <li>no-repeat;不平铺</li>
+    <li>repeat-x;在水平方向上平铺</li>
+    <li>repeat-y;在垂直方向上平铺</li>
+</ul>
+<h1>应用场景：</h1>
+<p>通过背景图片的平铺降低图片的大小，提升网页访问的速度</p>
+<h1>注意点</h1>
+<p>在同一个标签中可以同时设置背景颜色和背景图片，如果颜色和图片都存在，图片会覆盖背景颜色</p>
+<h1>控制背景图片的位置</h1>
+<p>通过background-position属性来设置</p>
+<h2>格式</h2>
+<p>background-position:水平方向 垂直方向;</p>
+<p>水平方向：left center right</p>
+<p>垂直方向：top center bottom</p>
+<p>也可以是像素取值，取值可以是负数，单位是px，必须写上</p>
+<h2>常用写法</h2>
+<p>background-position:center top;</p>
+<p>可以使背景图片处于屏幕顶部中间，无论网页的宽度是多少都是绝对处于网页的中间</p>
+<h1>背景图片的关联方式</h1>
+<p>background-attachment:scroll(默认)/fixed;</p>
+<p>取值：scroll(默认) 背景图片随着滚动条的滚动而滚动</p>
+<p>------fixed; 保持图片一直在视野中</p>
+<h1>背景属性的缩写格式：</h1>
+<p>background:背景颜色 背景图片 平铺方式 关联方式 定位方式;</p>
+<p>注意点：background中的属性都可以省略。</p>
+<h1>背景图片和插入图片的区别</h1>
+<p>1.背景图片只是一个装饰，不会占用位置，而插入图片会占用位置</p>
+<p>2.背景图片有定位属性，而插入的图片没有</p>
+<p>3.插入图片的语义要比背景图片的语义要强</p>
+</body>
+</html>

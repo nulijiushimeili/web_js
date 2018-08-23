@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>函数的call属性</title>
+    <script>
+        function show(a,b)
+        {
+            alert('this的值是：'+this+'\na的值是：'+a+'\nb的值是：'+b);
+        }
+        show.call('aaaa',1,6);      //调用一个对象的一个方法，以另一个对象替换当前对象。
+    </script>
+</head>
+<body>
+
+</body>
+</html>

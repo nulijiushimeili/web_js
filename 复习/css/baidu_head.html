@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baidu_head</title>
+    <style>
+        body,div,img,tr,td,table,a{
+            margin:0;
+            padding:0;
+        }
+        .main{
+            height: 20px;
+        }
+        .tr1{
+            float: left;
+        }
+        .tr2{
+            float: right;
+        }
+        .table1{
+            float: left;
+            height: 20px;
+        }
+        .table2{
+            float: right;
+        }
+        tr{
+            font-size: 12px;
+            text-align: center;
+            line-height: 20px;
+        }
+        td{
+            display: inline-block;
+            margin:0 7px 0 7px;
+
+        }
+        a{
+            color: #353536;
+        }
+        .img1{
+            background-image: url("images/weather1.png");
+            width: 27px;
+            height: 25px;
+            margin-top: -3px;
+        }
+        .img2{
+            background-image: url("images/weather.png");
+            width: 38px;
+            height: 29px;
+            margin-top: -5px;
+        }
+        .many{
+            width: 92px;
+            height: 68px;
+        }
+        .many a{
+            line-height: 20px;
+            text-align: center;
+        }
+        .imgNuomi{
+            background-image: url("images/nuomi.png");
+            width: 92px;
+            height: 48px;
+        }
+        .imgPicture{
+            background-image: url("images/nuomi.png");
+            width: 92px;
+            height: 48px;
+        }
+        .imgKnow{
+            background-image: url("images/nuomi.png");
+            width: 92px;
+            height: 48px;
+        }
+        .imgContent{
+            background-image: url("images/nuomi.png");
+            width: 92px;
+            height: 48px;
+        }
+        .hover{
+            position: relative;
+        }
+        .account{
+            position: absolute;
+            left:1359px;
+            display: none;
+        }
+        .settings{
+            position: absolute;
+            left:1426px;
+            display: none;
+        }
+        .manyProduction{
+            position: absolute;
+            right:0;
+            display: none;
+        }
+        .space{
+            width: 20px;
+            float:right;
+        }
+        .show{
+            display: block;
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload=function (ev) {
+            var oAcc=document.getElementById('account');
+            var oSet=document.getElementById('settings');
+            var oMany=document.getElementById('manyProduction');
+            var oAccount = document.getElementsByClassName('account');
+            var oSettings = document.getElementsByClassName('settings');
+            var oManyProduction=document.getElementsByClassName("manyProduction");
+            oAcc.onmouseover=function (ev2) {
+                // oAccount.style.display='block';
+                // oAccount.display="block";
+                oAccount.className="show";
+            };
+            oAcc.onmouseout=function (ev2) {
+                // oAccount.style.display="none";
+                // oAccount.display="none";
+                oAccount.className="hidden";
+            };
+            // oSet.onmouseover=function (ev2) {
+            //     oSettings.style.display="block";
+            // }
+            // oSet.onmouseout=function (ev2) {
+            //     oSettings.style.display="none";
+            // }
+            // oMany.onmouseover=function () {
+            //     oManyProduction.style.display="block";
+            // }
+            // oMany.onmouseout=function (ev2) {
+            //     oManyProduction.style.display="none";
+            // }
+
+
+        };
+    </script>
+</head>
+<body>
+<div class="main">
+    <div class="left">
+        <table class="table1">
+            <tr class="tr1">
+                <td>三门峡</td>
+                <td>10℃</td>
+                <td class="img1"></td>
+                <td class="img2"></td>
+                <td>170</td>
+                <td>|</td>
+            </tr>
+            <tr class="tr2">
+                <td><a href="#">换肤</a></td>
+                <td><a href="#">消息</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="space">&nbsp;</div>
+    <div class="right">
+        <table class="table2">
+            <tr class="tr3">
+                <td><a href="#">新闻</a></td>
+                <td><a href="#">好123</a></td>
+                <td><a href="#">地图</a></td>
+                <td><a href="#">视频</a></td>
+                <td><a href="#">贴吧</a></td>
+                <td><a href="#">学术</a></td>
+                <td id="account"><a href="#">改写你的人生</a></td>
+                <td id="settings"><a href="#">设置</a></td>
+                <td id="manyProduction"><a href="#">更多产品</a></td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+<div class="hover">
+    <table class="account">
+        <tr><td><a href="#">个人中心</a></td></tr>
+        <tr><td><a href="#">账号设置</a></td></tr>
+        <tr><td><a href="#">意见反馈</a></td></tr>
+        <tr><td><a href="#">退出</a></td></tr>
+    </table>
+    <table class="settings">
+        <tr><td><a href="#">搜索设置</a></td></tr>
+        <tr><td><a href="#">高级搜索</a></td></tr>
+        <tr><td><a href="#">关闭预测</a></td></tr>
+        <tr><td><a href="#">搜索历史</a></td></tr>
+    </table>
+
+    <div class="manyProduction">
+        <div class="many"><div class="imgNuomi"></div><a href="#">糯米</a></div>
+        <div class="many"><div class="imgPicture"></div><a href="#">图片</a></div>
+        <div class="many"><div class="imgKnow"></div><a href="#">知道</a></div>
+        <div class="many"><div class="imgContent"></div><a href="#">文库</a></div>
+    </div>
+</div>
+</body>
+</html>

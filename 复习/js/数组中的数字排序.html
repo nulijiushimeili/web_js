@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组中的数字排序</title>
+    <script>
+        var arr=[12,99,112,92,100];
+        arr.sort(function (n1,n2) {
+            //return n1-n2;         也可以这样写
+            if(n1<n2)
+            {
+                return -1;          //返回值只要是负数都行
+            }
+            else if(n1>n2)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        });
+        alert(arr);
+    </script>
+</head>
+<body>
+<p>var arr=[12,99,112,92,100];
+    arr.sort(function (n1,n2) {
+    //return n1-n2;         也可以这样写
+    if(n1<'n2)
+    {
+    return -1;          //返回值只要是负数都行
+    }
+    else if(n1>n2)
+    {
+    return 1;
+    }
+    else
+    {
+    return 0;
+    }
+    });
+    alert(arr);
+</p>
+</body>
+</html>

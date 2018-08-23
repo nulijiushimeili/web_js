@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> 函数传参1</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black ;
+        }
+    </style>
+    <script>
+        function bianSe(color){
+            var oDiv=document.getElementById('div1');
+            oDiv.style.backgroundColor=color;
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="变绿" onclick="bianSe('green')"/>
+<input type="button" value="变红" onclick="bianSe('red')"/>
+<input type="button" value="变黑" onclick="bianSe('#000')"/>
+<div id="div1"></div>
+</body>
+</html>

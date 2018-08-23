@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片显示时间</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div1{
+            margin-left: 600px;
+            margin-top: 403px;
+        }
+    </style>
+    <script>
+        function todouble(n) {
+            if(n<10)
+            {
+                return '0'+n;
+            }
+            else
+            {
+                return ''+n;
+            }
+        }
+        window.onload=function () {
+
+            var oImg=document.getElementsByTagName('img');
+
+            //var str=oDate.getHours()+oDate.getMinutes()+oDate.getSeconds();
+
+            function show() {
+                var oDate=new Date();
+                var str=todouble(oDate.getHours())+todouble(oDate.getMinutes())+todouble(oDate.getSeconds());
+                for(var i=0;i<str.length;i++)
+                {
+                    oImg[i].src='images/number/'+str.charAt(i)+'.jpg';
+                }
+            }
+            setInterval(show,1000);
+            show();
+        }
+    </script>
+</head>
+<body>
+<div id="div1">
+    <img src="images/number/0.jpg" alt="">
+    <img src="images/number/0.jpg" alt="">
+    ：
+    <img src="images/number/0.jpg" alt="">
+    <img src="images/number/0.jpg" alt="">
+    ：
+    <img src="images/number/0.jpg" alt="">
+    <img src="images/number/0.jpg" alt="">
+</div>
+</body>
+</html>

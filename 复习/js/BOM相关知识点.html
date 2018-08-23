@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM相关知识点</title>
+</head>
+<body>
+<h1>window.open(打开页面的名称,打开方式(_self/_blank))-------打开一个页面,可以在新页面打开，也可以在当前页面打开</h1>
+<h1>window.close()-----------colse在IE下，可以关闭用户打开的网页,而且会有提示，而火狐下只能关闭open出来的网页</h1>
+<h1>window.navigator.userAgent-----------获取当前浏览器的类型和版本</h1>
+<h1>window.location----------------------获取当前页面的地址，还可以赋值一个地址</h1>
+<input type="button" value="window.location" onclick="window.location='https://www.baidu.com/?tn=98012088_5_dg&ch=12';">
+<h1>尺寸及坐标</h1>
+<h2>1.document.documentElement.clientWidth--------可视区的宽度</h2>
+<h2>2.document.documentElement.clientHeight-------可视区的高度</h2>
+<h2>3.document.body.scrollTop---------------------滚动距离(chrome下兼容，滚动距离是100的整数倍)</h2>
+<h2>4.document.documentElement.scrollTop----------滚动距离(其他浏览器兼容)</h2>
+<h1>window.onsize---------------------------------当窗口大小改变的时候发生</h1>
+<h1>系统对话框</h1>
+<h2>alert()</h2>
+<h2>confirm(提问的内容)，返回Boolean值</h2>
+<h2>prompt('提示'，'初始内容(可以省略)'),返回字符串或null------弹出一个能够输入的对话框</h2>
+<h1>window.onresize--------------当窗口改变大小的时候</h1>
+<h1>window.onscroll--------------当页面滚动的时候</h1>
+</body>
+</html>

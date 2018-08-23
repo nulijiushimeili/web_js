@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>面向对象_拖拽继承</title>
+    <style>
+        #div1{
+            width: 250px;
+            height: 200px;
+            background-color: #f00;
+            position: absolute;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background-color: #ff0;
+            position: absolute;
+        }
+    </style>
+    <script src="Drag.js"></script>
+    <script src="limitDrag.js">
+        //调用js文件时，如果文件有关联，要注意调用文件的顺序，否则会提示找不到这个方法。
+    </script>
+
+    <script>
+        window.onload=function () {
+            new Drag('div1');
+            new limitDrag('div2');
+        }
+        //限制范围的拖拽，可以只更改这个子类的属性，而父类不受影响
+        limitDrag.prototype.fnMove=function (ev) {
+            var oEvent=ev||event;
+            var l=oEvent.clientX-this.disX;
+            var t=oEvent.clientY-this.disY;
+            if(l<0)
+            {
+                l=0;
+            }
+            else if(l>document.documentElement.clientWidth-this.oDiv.offsetWidth)
+            {
+                l=document.documentElement.clientWidth-this.oDiv.offsetWidth;
+            }
+            if(t<0)
+            {
+                t=0;
+            }
+            else if(t>document.documentElement.clientHeight-this.oDiv.offsetHeight)
+            {
+                t=document.documentElement.clientHeight-this.oDiv.offsetHeight;
+            }
+            this.oDiv.style.left=l+'px';
+            this.oDiv.style.top=t+'px';
+        };
+    </script>
+</head>
+<body>
+<div id="div1">普通拖拽</div>
+<div id="div2">限制范围的拖拽</div>
+</body>
+</html>

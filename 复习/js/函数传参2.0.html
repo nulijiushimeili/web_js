@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>函数传参2.0</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function setShuXing(name,value){
+            var oDiv=document.getElementById('div1');
+            oDiv.style[name]=value;
+        }
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+<input type="button" value="变宽" onclick="setShuXing('width','400px')"/>
+<input type="button" value="变高" onclick="setShuXing('height','400px')"/>
+<input type="button" value="变红" onclick="setShuXing('background','red')"/>
+</body>
+</html>

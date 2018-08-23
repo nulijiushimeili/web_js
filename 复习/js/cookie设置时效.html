@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cookie设置时效</title>
+    <script>
+        var oDate=new Date();
+        oDate.setDate(oDate.getDate()+14);
+        //alert(oDate);
+        document.cookie='name=zhangsan;expires='+oDate;
+        alert(document.cookie);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

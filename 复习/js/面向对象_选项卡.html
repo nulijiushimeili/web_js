@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>面向对象_选项卡</title>
+    <style>
+        #div1 div{
+            width: 280px;
+            height: 280px;
+            background-color: #ccc;
+            border: 1px solid black;
+            display: none;
+        }
+        #div1 .active{
+            background-color: #ff0;
+        }
+        #div1 input{
+            background-color: #fff;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oDiv=document.getElementById('div1');
+            var aBtn=oDiv.getElementsByTagName('input');
+            var aDiv=oDiv.getElementsByTagName('div');
+            for(var i=0;i<aBtn.length;i++){
+                aBtn[i].index=i;
+                aBtn[i].onclick=function(){
+                    for(var i=0;i<aBtn.length;i++)
+                    {
+                        aBtn[i].className='';
+                        aDiv[i].style.display='none';
+                    }
+                    this.className='active';
+                    aDiv[this.index].style.display='block';
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+<div id="div1">
+    <input type="button" class="active" value="按钮1"/>
+    <input type="button" value="按钮2"/>
+    <input type="button" value="按钮3"/>
+    <input type="button" value="按钮4"/>
+    <input type="button" value="按钮5"/>
+    <div style="display: block">智能社第28课可以改写成面向对象的程序，在小程序里面用处不大</div>
+    <div>2222222222</div>
+    <div>3333333333333</div>
+    <div>4444444444</div>
+    <div>555555555555</div>
+</div>
+</body>
+</html>

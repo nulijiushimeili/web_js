@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>自定义右键菜单</title>
+    <style>
+        #div{
+            width: 200px;
+            height: 600px;
+            background-color: #ccc;
+            display: none;
+            position: absolute;
+            border: 1px solid black;
+        }
+        *{
+            margin: 0;
+            padding:0;
+            list-style: none;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oDiv=document.getElementById('div');
+            document.oncontextmenu=function(ev){
+                var oEvent=ev||event;
+
+                oDiv.style.display='block';
+                oDiv.style.left=oEvent.clientX+'px';
+                oDiv.style.top=oEvent.clientY+'px';
+                return false;
+            };
+            document.onclick=function(){
+                oDiv.style.display='none';
+            };
+            /*
+            oDiv.onclick=function(ev){
+                var oEvent=ev||event;
+                oEvent.cancelBubble=true;
+            };
+            */
+        };
+    </script>
+</head>
+<body>
+<div id="div">
+    <ul>
+        <li>右键自定义菜单</li>
+        <li>啊啊啊啊啊啊</li>
+        <li>哦        </li>
+        <li>鹅鹅鹅饿鹅鹅鹅饿</li>
+    </ul>
+</div>
+</body>
+</html>

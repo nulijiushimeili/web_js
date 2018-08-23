@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>获取非行间样式兼容写法</title>
+    <style>
+        #div{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oDiv=document.getElementById('div');
+            if(oDiv.currentStyle){
+                alert(oDiv.style.width);//兼容IE7和IE8
+            }
+            else
+            {
+                alert(getComputedStyle(oDiv,false).width);//兼容其他浏览器,只能取单一样式，不能取复合样式。
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="div"></div>
+</body>
+</html>

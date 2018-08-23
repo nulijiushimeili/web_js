@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <style>
+        #div input{
+            width: 50px;
+            height: 30px;
+            border: 1px solid black;
+        }
+        .active{
+            background-color: #ffff00;
+        }
+        #div1 div{
+            height: 200px;
+            width: 300px;
+            background-color: #ccc;
+            margin: 10px;
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var odiv=document.getElementById('div1');
+            var ipt=odiv.getElementsByTagName('input');
+            var ddiv=odiv.getElementsByTagName('div');
+            for(var i=0;i<ipt.length;i++)
+            {
+                ipt[i].index=i;
+                ipt[i].onmouseover=function ()
+                {
+                    for(var i=0;i<ipt.length;i++)
+                    {
+                        ipt[i].className='';
+                        ddiv[i].style.display='none';
+                    }
+                    this.className='active';
+                    ddiv[this.index].style.display='block';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="div1">
+    <input class="active" type="button" value="news">
+    <input type="button" value="video">
+    <input type="button" value="music">
+    <input type="button" value="game">
+    <div style="display: block;">11111这是第一页；大概是考虑到山东呈现出错错错错错错错错错错错错错</div>
+    <div>22222这是第二页的点点滴滴多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多</div>
+    <div>33333这是第三页灌灌灌灌灌过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过过</div>
+    <div>44444这是第四页吞吞吐吐拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖</div>
+</div>
+</body>
+</html>

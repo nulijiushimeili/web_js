@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-第二课</title>
+    <style>
+        #div1{
+            width: 100px;
+            height: 100px;
+            background:#f00;
+        }
+    </style>
+    <script>
+        function toGreen() {
+            var oDiv=document.getElementById('div1');
+            oDiv.style.background='green';
+        }
+        function toBlue() {
+            var oDiv=document.getElementById('div1');
+            oDiv.style.background='blue';
+        }
+        function toBlack() {
+            var oDiv=document.getElementById('div1');
+            oDiv.style.background='black';
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="变绿" onclick="toGreen()"/>
+<input type="button" value="变蓝" onclick="toBlue()"/>
+<input type="button" value="变黑" onclick="toBlack()"/>
+<div id="div1">
+    
+    
+</div>
+</body>
+</html>

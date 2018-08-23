@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>封装cookie</title>
+    <script>
+        //setcookie
+        function setCookie(name,value,iDay) {
+            var oDate=new Date();
+            oDate.setDate(oDate.getDate()+iDay);
+            document.cookie=name+'='+value+';expires='+oDate;
+        }
+        setCookie('name','lisi',365);
+        setCookie('password','123456',14);//多数设置，不会覆盖，除非同名
+        //在火狐右键-页面信息-安全-查看cookie-查看cookie保存的时间
+        //alert(document.cookie);
+        //getcookie
+        function getCookie(name) {
+            var arr=document.cookie.split('; ');
+            for(var i=0;i<arr.length;i++)
+            {
+                var arr2=arr[i].split('=');
+                if(arr2[0]==name)
+                {
+                    return arr2[1];
+                }
+
+            }
+            return '';
+        }
+        alert(getCookie('name'));       //弹出获得的cookie
+        //删除cookie
+        function removeCookie(name) {
+            setCookie(name,1,-1);
+        }
+        removeCookie('name');
+        alert(document.cookie);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

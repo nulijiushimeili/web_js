@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>限制用户输入</title>
+    <script>
+        window.onload=function() {
+            var oTxt = document.getElementById('txt');
+            oTxt.onkeydown = function (ev) {
+                var oEvent = ev || event;
+                if (oEvent.keyCode < 48 || oEvent.keyCode > 57) {
+                    return false;     //阻止默认行为
+                }
+            };
+
+            /*
+            oTxt.onkeydown = function () {    //什么都输不了
+                return false;
+            };
+            */
+        };
+    </script>
+</head>
+<body>
+<input type="text" id="txt"/>
+</body>
+</html>

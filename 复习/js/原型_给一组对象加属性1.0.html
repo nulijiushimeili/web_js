@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>原型_给一组对象加属性</title>
+    <script>
+        var arr1=new Array(1,3,6,9,14,22,55);
+        var arr2=new Array(55,66,44,22);
+        Array.prototype.sum=function(){      //类似于class
+        //arr1.sum=function(){
+            var result=0;
+            for(var i=0;i<this.length;i++)
+            {
+                result+=this[i];
+            }
+            return result;
+        };
+        alert(arr1.sum());
+        alert(arr2.sum());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

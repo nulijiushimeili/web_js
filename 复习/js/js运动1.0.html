@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js运动1.0</title>
+    <style>
+        #div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: absolute;/*运动的物体必须使用绝对定位*/
+            opacity:0.5;
+
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oBtn=document.getElementById('btn');
+            var oDiv=document.getElementById('div');
+            var timer=null;
+            function move(){
+                oDiv.style.left=oDiv.offsetLeft+10+'px';
+                oBtn.value=document.getElementsByTagName('body')[0].scrollWidth;
+            }
+            oBtn.onclick=function(){
+                timer=setInterval(move,30);
+                alert(oDiv.style.filter);
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="开始运动" id="btn"/>
+<div id="div"></div>
+</body>
+</html>
